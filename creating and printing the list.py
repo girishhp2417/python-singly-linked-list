@@ -12,6 +12,16 @@ class LinkedList:
 
         new_node.next=self.head
         self.head=new_node
+
+    def append(self,new_data):
+        new_node=Node(new_data)
+
+        last=self.head
+        while(last.next):
+            last=last.next
+
+        new_node.next=None
+        last.next=new_node
  
 
     def printList(self):
@@ -24,8 +34,10 @@ if __name__=='__main__':
     llist=LinkedList()
 
     llist.push(23)
-    llist.push(31)
-    llist.push(45)
+    llist.push(34)
+    llist.push(43)
+    llist.append(99)
+    llist.append(109)
 
     llist.printList()
  
