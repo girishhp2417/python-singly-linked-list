@@ -13,6 +13,12 @@ class LinkedList:
         new_node.next=self.head
         self.head=new_node
 
+    def addafter(self,prev_node,new_data):
+        new_node=Node(new_data)
+
+        new_node.next=prev_node.next
+        prev_node.next=new_node
+
     def append(self,new_data):
         new_node=Node(new_data)
 
@@ -38,6 +44,9 @@ if __name__=='__main__':
     llist.push(43)
     llist.append(99)
     llist.append(109)
+    llist.addafter(llist.head.next,234)
+    llist.addafter(llist.head.next.next,453)
+
 
     llist.printList()
  
