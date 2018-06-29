@@ -28,6 +28,23 @@ class LinkedList:
 
         new_node.next=None
         last.next=new_node
+
+    def deletekey(self,key):
+        temp=self.head
+
+        if(temp.data==key):
+            self.head=temp.next
+            temp=None
+            return
+        
+        while temp is not none:
+            if(temp.data==key):
+                break
+            prev=temp
+            temp=temp.next
+
+        prev.next=temp.next
+        temp=None
  
 
     def printList(self):
