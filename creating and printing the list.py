@@ -29,7 +29,6 @@ class LinkedList:
         new_node.next=None
         last.next=new_node
  
-
     def printList(self):
         temp = self.head
         while (temp):
