@@ -47,4 +47,3 @@ if __name__ =='__main__':
 
     print("The Reversed List is")
     llist.reverse()
-        
